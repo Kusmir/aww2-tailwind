@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid Layout Example</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      grid-template-columns: 1fr 200px;
+      min-height: 100vh;
+    }
+    header, footer, article, aside {
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+    header, footer {
+      grid-column: 1 / -1;
+    }
+    article {
+      grid-column: 1;
+    }
+    aside {
+      grid-column: 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <header>
+      <h1>Header</h1>
+    </header>
+    <article>
+      <h2>Main Article</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in luctus tellus. Proin pulvinar venenatis arcu sit amet pellentesque. Vivamus finibus purus eget risus dapibus, non posuere eros efficitur.</p>
+    </article>
+    <aside>
+      <h2>Sidebar</h2>
+      <ul>
+        <li>Link 1</li>
+        <li>Link 2</li>
+        <li>Link 3</li>
+      </ul>
+    </aside>
+    <footer>
+      <p>Footer</p>
+    </footer>
+  </div>
+</body>
+</html>

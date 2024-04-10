@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG ludzik kreator</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="content-center bg-pink-300">
+            <h1 class="flex justify-center text-yellow-300">SUPER RPG LUDZIK KREATOR</h1>
+        </header>
+
+        <article>
+            <h2>Tworzenie postaci</h2>
+            <p>
+                Tu możesz utworzyć swojego 
+                <span class="animate-ping">
+                    <em><strong>super rpg ludzika</strong></em>
+                </span>!
+            </p>
+
+            <h2>Dostępne rasy</h2>
+            <ul class="list-inside list-[upper-roman]">
+                <li><span class="bg-yellow-100 inline">Człowiek</span></li>
+                <li><span class="bg-green-100 inline">Elf</span></li>
+                <li><span class="bg-red-100 inline">Krasnolud</span></li>
+            </ul>
+
+            <div class="flex justify-center">
+                <table class="text-lg table-auto bg-gray-100">
+                    <caption>Domyślne atrybuty dla poszczególnych klas</caption>
+                    <thead>
+                        <tr>
+                            <th>Rasa</th>
+                            <th>Siła</th>
+                            <th>Wzrost</th>
+                            <th>Inteligencja</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Człowiek</td>
+                            <td>50</td>
+                            <td>1.80m</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>Elf</td>
+                            <td>20</td>
+                            <td>2.20m</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>Krasnolud</td>
+                            <td>100</td>
+                            <td>1.20m</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+
+            <h2>Podgląd ludzika</h2>
+            <p> 
+                Gdyby dało się wybrać rasę <em>ogr</em> i klasę <em>muzyk</em>, 
+                Twój ludzik mógłby wyglądać tak:
+                <a href="img/shreksophone.jpg">obrazek</a>
+            </p>
+
+            <h2>flex-row</h2>
+            <div class="flex flex-row">
+            <div class="bg-red-500 w-16 h-16 rounded-lg">1</div>
+            <div class="bg-green-500 w-16 h-16 rounded-lg">2</div>
+            <div class="bg-blue-500 w-16 h-16 rounded-lg">3</div>
+            </div>
+
+            <h2>flex-col</h2>
+            <div class="flex flex-col">
+            <div class="bg-red-500 w-16 h-16 rounded-lg">1</div>
+            <div class="bg-green-500 w-16 h-16 rounded-lg">2</div>
+            <div class="bg-blue-500 w-16 h-16 rounded-lg">3</div>
+            </div>
+
+            <h2>flex-auto</h2>
+            <div class="flex">
+            <div class="bg-red-500 w-16 h-16 flex-auto rounded-lg">1</div>
+            <div class="bg-green-500 w-16 h-16 flex-auto rounded-lg">2</div>
+            <div class="bg-blue-500 w-16 h-16 flex-auto rounded-lg">3</div>
+            </div>
+
+            <h2>flex-fixed</h2>
+            <div class="flex">
+            <div class="bg-red-500 w-16 h-16 flex-none rounded-lg">1</div>
+            <div class="bg-green-500 w-16 h-16 flex-none rounded-lg">2</div>
+            <div class="bg-blue-500 w-16 h-16 flex-none rounded-lg">3</div>
+            </div>
+        </article>
+
+        <sidebar>
+            <h3>Pasek życia bohatera</h3>
+            <progress class="shadow-inner" value="42" max="100">50%</progress>
+            <details>
+                <summary>spoiler</summary>
+                <p>Nie da się go zmienić.</p>
+            </details>
+
+            <h3>Informacje o ludziku</h3>
+            <form>
+                <label for="name_field">Imię ludzika:</label>
+                <input class="shadow-lg border border-gray-950" type="text" id="name_field" name="name"><br><br>
+
+                <label for="race_field">Klasa postaci:</label>
+                <select class="shadow-md" id="race_field">
+                    <option>Człowiek</option>
+                    <option>Elf</option>
+                    <option>Krasnolud</option>
+                </select></br>
+
+                <label for="class_field">Klasa postaci:</label>
+                <select class="shadow-md" id="class_field">
+                    <optgroup label="Człowiek:">
+                        <option>Czarodziej</option>
+                        <option>Wojownik</option>
+                    </optgroup>
+                    <optgroup label="Elf:">
+                        <option>Czarodziej</option>
+                        <option>Łucznik</option>
+                    </optgroup>
+                    <optgroup label="Krasnolud:">
+                        <option>Wojownik</option>
+                    </optgroup>
+                </select><br><br>
+
+                <div class="flex justify-center">
+                    <button class="bg-transparent hover:bg-gray-500 text-gray-600 font-semibold hover:text-white py-2 px-4 border border-gray-950 hover:border-transparent rounded">
+                        Utwórz
+                    </button>
+                </div>
+
+            </form>
+        </sidebar>
+
+        <footer>
+            <p> Jak bardzo jesteś zadowolony ze swojego ludzika w skali buziek uśmiechniętych bardziej lub mniej? </p>
+            <div class="flex justify-center">
+                <img src="img/faces.jpg" alt="faces" usemap="#workmap">
+            </div>
+            <map name="workmap">
+                <area 
+                    class="bg-sky-500 hover:bg-red-500"
+                    shape="circle" coords="65 65 65" alt="happy" href="happy.html">
+                <area shape="circle" coords="215,65,65" alt="so-so" href="so-so.html">
+                <area shape="circle" coords="365,65,65" alt="sad" href="sad.html">
+            </map>
+        </footer>
+    </div>
+</body>
+</html>
